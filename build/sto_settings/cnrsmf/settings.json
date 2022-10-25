@@ -1,0 +1,250 @@
+{
+    "settings": {
+        "LocalConfigurations": {
+            "SessionManagementSubscriptionData": {
+                "dnnConfigurations": {
+                    "dnn.emergency.com": {
+                        "5gQosProfile": {
+                            "5qi": 5,
+                            "arp": {
+                                "preemptCap": "NOT_PREEMPT",
+                                "preemptVuln": "NOT_PREEMPTABLE",
+                                "priorityLevel": 1
+                            },
+                            "priorityLevel": 1
+                        },
+                        "iwkEpsInd": false,
+                        "pduSessionTypes": {
+                            "defaultSessionType": "IPV4V6"
+                        },
+                        "sessionAmbr": {
+                            "downlink": "10 Mbps",
+                            "uplink": "10 Mbps"
+                        },
+                        "sscModes": {
+                            "allowedSscModes": [
+                                "SSC_MODE_1",
+                                "SSC_MODE_2",
+                                "SSC_MODE_3"
+                            ],
+                            "defaultSscMode": "SSC_MODE_1"
+                        }
+                    }
+                }
+            }
+        },
+        "MTUConfigurations": {
+            "MTUSize": "1000"
+        },
+        "NFServices": {
+            "NFServicesIP": {
+                "AMFServicesIP": {
+                    "n1n2MessageTransferAddress": "10.20.0.11",
+                    "n1n2MessageTransferIPv6Address": "::1"
+                },
+                "CHFServicesIP": {
+                    "convergedChargingAddress": "127.0.0.1",
+                    "convergedChargingIPv6Address": "::1"
+                },
+                "NEFServicesIP": {
+                    "pfdManagementAddress": "10.20.0.13",
+                    "pfdManagementIPv6Address": "::1"
+                },
+                "NRFServicesIP": {
+                    "NRFUnsubscribeAddress": "10.20.0.14",
+                    "NRFUnsubscribeIPv6Address": "::1",
+                    "nrfAccessTokenAddress": "10.20.0.14",
+                    "nrfAccessTokenIPv6Address": "::1",
+                    "nrfDiscAddress": "10.20.0.14",
+                    "nrfDiscIPv6Address": "::1",
+                    "nrfRegAddress": "10.20.0.14",
+                    "nrfRegIPv6Address": "::1",
+                    "nrfSubscribeAddress": "10.20.0.14",
+                    "nrfSubscribeIPv6Address": "::1"
+                },
+                "PCFServicesIP": {
+                    "smPolicyAddress": "10.20.0.4",
+                    "smPolicyIPv6Address": "::1"
+                },
+                "UDMServicesIP": {
+                    "udmAddress": "10.20.0.17",
+                    "udmIPv6Address": "::1"
+                },
+                "UPFServicesIP": {
+                    "upfAddress": "10.20.0.19",
+                    "upfIPv6Address": "::1"
+                }
+            },
+            "NFServicesPort": {
+                "AMFServicesPort": {
+                    "n1n2MessageTransferPort": "6210"
+                },
+                "CHFServicesPort": {
+                    "convergedChargingPort": "9997"
+                },
+                "NEFServicesPort": {
+                    "pfdManagementPort": "8201"
+                },
+                "NRFServicesPort": {
+                    "NRFUnsubscribePort": "8001",
+                    "nrfAccessTokenPort": "8007",
+                    "nrfDiscPort": "8006",
+                    "nrfRegPort": "8001",
+                    "nrfSubscribePort": "8001"
+                },
+                "PCFServicesPort": {
+                    "smPolicyPort": "7002"
+                },
+                "SGWServicesPort": {
+                    "sgwGtpv2Port": "2123"
+                },
+                "UDMServicesPort": {
+                    "sdmGetPort": "5001",
+                    "sdmSubsPort": "5001",
+                    "sdmUnsubsPort": "5001",
+                    "uecmRegPort": "5000"
+                },
+                "UPFServicesPort": {
+                    "upfCcPoiPort": "4202",
+                    "upfN4Port": "8805"
+                }
+            }
+        },
+        "PCSCFConfigurations": {
+            "pcscfPort": "5060",
+            "pcscfV4Address": "10.20.0.4",
+            "pcscfV6Address": "::1"
+        },
+        "SMFServicesConfigurations": {
+            "SMFAddresses": {
+                "ipv4Addresses": {
+                    "ipv4Address": [
+                        "10.20.0.16"
+                    ]
+                },
+                "ipv6Addresses": {
+                    "ipv6Address": [
+                        "2001::db8::10"
+                    ]
+                }
+            },
+            "SMFFQDN": {
+                "NsmfEventExposureServiceFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "NsmfEventExposureServiceInterPLMNFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "NsmfPDUSessionServiceFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "NsmfPDUSessionServiceInterPLMNFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "PGWFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "nfProfileFQDN": "5gc.mnc127.mcc345.3gppnetwork.org",
+                "nfProfileInterPLMNFQDN": "5gc.mnc127.mcc345.3gppnetwork.org"
+            },
+            "SMFServicesNames": {
+                "smfServiceName": [
+                    "nsmf-pdusession",
+                    "nsmf-event-exposure"
+                ]
+            },
+            "SMFServicesPorts": {
+                "amfEventExposureNotifyPort": "6128",
+                "amfEventNfSubsServerPort": "6129",
+                "amfNfSubsServerPort": "6115",
+                "amfNotifyServerPort": "6118",
+                "amfStatusChangeNotifyServerPort": "6130",
+                "chfNotifyServerPort": "6135",
+                "chfSubsServerPort": "6134",
+                "dhcpClientPort": "6168",
+                "dhcpv6ClientPort": "6148",
+                "eventExposureServerPort": "6123",
+                "guiServerPort": "6990",
+                "liServerPort": "6131",
+                "mdfServerPort": "6133",
+                "n4NodeClientPort": "6111",
+                "n4SessionClientPort": "6117",
+                "n4uClientPort": "6122",
+                "nefNfSubsServerPort": "6126",
+                "nefNotifyServerPort": "6127",
+                "pcfNfSubsServerPort": "6120",
+                "pcfNotifyServerPort": "6116",
+                "pduAmfServerPort": "6110",
+                "sdmSubsServerPort": "6112",
+                "udmNfSubsServerPortSDM": "6113",
+                "udmNfSubsServerPortUECM": "6121",
+                "udmPCSCFServerPort": "6114",
+                "upfGTPPort": "2152",
+                "upfNfSubsServerPort": "6124"
+            },
+            "mcc": "001",
+            "mnc": "002",
+            "sNssaiSmfInfoList": [
+                {
+                    "dnnSmfInfoList": [
+                        {
+                            "dnn": "dnn.test2.com"
+                        },
+                        {
+                            "dnn": "dnn.ims.com"
+                        },
+                        {
+                            "dnn": "dnn.emergency.com"
+                        },
+                        {
+                            "dnn": "dnn.ladn0.com"
+                        },
+                        {
+                            "dnn": "dnn.test1.com"
+                        }
+                    ],
+                    "sNssai": {
+                        "sst": 1
+                    }
+                }
+            ],
+            "tacs": [
+                "000001",
+                "000002",
+                "000003"
+            ]
+        },
+        "SettingsType": "deployment",
+        "SettingsVersion": "0.2",
+        "UEIPAddressManagementParameters": {
+            "DhcpServerAddress": "172.30.255.2",
+            "DhcpServerFunction": "false",
+            "DhcpServerPort": "6167",
+            "DhcpServerV6Address": "fe80::20b:dbff:fe91:6fd6",
+            "DhcpSubnet": "172.30.255.208/28",
+            "DhcpSubnetV6": "AAAA:BBBB:CCCC::/48",
+            "Dhcpv6ServerPort": "6147",
+            "IPAddressAllocationMethod": "DHCP",
+            "V6LinkLocalSubnet": "AAAA:BBBB:CCCC::/48"
+        },
+        "generalParameters": {
+            "AccessToken": "true",
+            "ClientThreadCount": "8",
+            "ConnectTimer": "30000",
+            "DBSettings": {
+                "dbname": "stonrfcommon",
+                "dbtype": "MONGO",
+                "host": "10.20.0.3",
+                "password": "P5vKG6vE",
+                "port": "27017",
+                "username": "cnrusr"
+            },
+            "DisplayLog": "true",
+            "IPType": "IPV4",
+            "MaxCapacity": "60000",
+            "SENDEM": "true",
+            "SubscriptionPeriod": "3600000",
+            "TLS_NRF": "false",
+            "TLS_SMF": "false",
+            "applyChangesToActiveSessions": "true",
+            "ladnWaitTimeBeforeRelease": "6000",
+            "logLevel": "DEBUG",
+            "readFromDatabase": "true",
+            "suggestedPacketCnt": "90",
+            "upfBufferDelay": "80",
+            "upfBufferingDuration": "100",
+            "writeToCerr": "false"
+        },
+        "performanceTest": "false"
+    }
+}

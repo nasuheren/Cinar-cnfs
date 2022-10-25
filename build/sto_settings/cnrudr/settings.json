@@ -1,0 +1,80 @@
+{
+    "Database": {
+        "ConnectionPoolSize": 128,
+        "ConnectionRetryPeriod": 120000,
+        "ConnectionTimeout": 3,
+        "DatabaseName": "newstodb",
+        "DatabaseType": "POSTGRESQL",
+        "Password": "P5vKG6vE",
+        "Port": 5432,
+        "Server": "10.20.0.2",
+        "SubscriptionCheckPeriod": 60000,
+        "UserName": "cnrusr"
+    },
+    "General": {
+        "ClientCount": 12,
+        "ClientTLSMutual": false,
+        "ClientTimeout": 3000,
+        "DataRepositoryCustomIP": "10.20.0.18",
+        "DataRepositoryCustomOAuth2Enabled": false,
+        "DataRepositoryCustomPort": 5422,
+        "DataRepositoryCustomTLSEnabled": false,
+        "PrometheusIP": "0.0.0.0",
+        "PrometheusPort": 5019,
+        "PrometheusTLSEnabled": false,
+        "PrometheusThreadCount": 1,
+        "SettingsIP": "10.20.0.18",
+        "SettingsOAuth2Enabled": false,
+        "SettingsPort": 5421,
+        "SettingsTLSEnabled": true,
+        "SettingsTLSMutualAuth": false,
+        "SettingsThreadCount": 1,
+        "SubscriptionIP": "10.20.0.18",
+        "SubscriptionPort": 5423,
+        "SubscriptionTLSEnabled": false,
+        "SubscriptionTLSMutualAuth": false,
+        "SubscriptionThreadCount": 1,
+        "homePlmnId": {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    },
+    "Logging": {
+        "Directory": "/var/log/cinar/udr/",
+        "DisplayLog": false,
+        "FileName": "cnrudr",
+        "LogLevel": "DEBUG"
+    },
+    "Nrf": {
+        "ClientCount": 1,
+        "ClientTimeout": 3000,
+        "DiscServicePort": 8006,
+        "FQDN": "",
+        "IPAddress": "10.20.0.14",
+        "NfmServicePort": 8001,
+        "OAuth2ServicePort": 8007,
+        "TAccessTokenPeriod": 1000,
+        "TCheckPeriod": 60000,
+        "TDiscoveryPeriod": 3000,
+        "TLSMutualAuth": false,
+        "TLSSecure": false,
+        "TRetryPeriod": 3000,
+        "TSubscriptionPeriod": 10000
+    },
+    "Security": {
+        "OAuth2": {
+            "PublicKeyFile": "/opt/cinar/certificate/jwt.pub"
+        },
+        "TLS": {
+            "PrivateKeyFile": "/opt/cinar/certificate/localhost.key",
+            "PublicKeyFile": "/opt/cinar/certificate/localhost.crt"
+        }
+    },
+    "nudr-dr": {
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 12,
+        "OAuth2Enabled": true,
+        "VersionFull": "2.0.1.alpha-1",
+        "VersionInUri": "v2"
+    }
+}

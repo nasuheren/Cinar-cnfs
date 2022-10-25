@@ -1,0 +1,374 @@
+{
+    "date": "2021-Nov-25",
+    "autor": "Auto",
+    "AdditionalNFServices": {
+        "0": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8202"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d231",
+            "serviceName": "3gpp-pfd-management",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-pfd-management\/v1"
+                }
+            }
+        },
+        "1": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8203"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d232",
+            "serviceName": "3gpp-traffic-influence",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-traffic-influence\/v1"
+                }
+            }
+        },
+        "10": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8212"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d23a",
+            "serviceName": "nnef_afprofilemanagement",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/nnef-afregister\/v1\/afprofiles"
+                }
+            }
+        },
+        "11": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8215"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d23b",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v2",
+                    "apiVersionInUri": "\/log\/v2"
+                }
+            }
+        },
+        "2": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8204"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d233",
+            "serviceName": "nef-settings",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/nef-settings\/v1"
+                }
+            }
+        },
+        "3": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8205"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d234",
+            "serviceName": "metrics",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/metrics"
+                }
+            }
+        },
+        "4": {
+            "defaultNotificationSubscriptions": {
+                "0": {
+                    "callbackUri": "\/3gpp-monitoring-event\/v1\/MonitoringEventNotification\/nnefMonitoringEventNotify",
+                    "notificationType": "LOCATION_NOTIFICATION"
+                }
+            },
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8206"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d235",
+            "serviceName": "3gpp-monitoring-event",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-monitoring-event\/v1"
+                }
+            }
+        },
+        "5": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8207"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d236",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/oauth2\/token"
+                }
+            }
+        },
+        "6": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8208"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d237",
+            "serviceName": "3gpp-bdt",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-bdt\/v1"
+                }
+            }
+        },
+        "7": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8209"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d238",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-cp\/v1"
+                }
+            }
+        },
+        "8": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8210"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d239",
+            "serviceName": "3gpp-as-session-with-qos",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-as-session-with-qos\/v1"
+                }
+            }
+        },
+        "9": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.13",
+                    "port": "8211"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff217d230",
+            "serviceName": "3gpp-device-triggering",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/3gpp-device-triggering\/v1"
+                }
+            }
+        }
+    },
+    "Database": {
+        "ConnectionPoolSize": "4",
+        "ConnectionRetryPeriod": "5000",
+        "ConnectionTimeout": "1000",
+        "DatabaseName": "stonrfcommon",
+        "DatabaseType": "MONGO",
+        "Password": "P5vKG6vE",
+        "Port": "27017",
+        "Server": "10.20.0.3",
+        "ServerSelectionTimeout": "1000",
+        "SocketTimeout": "1000",
+        "Tables": {
+            "0": "cinarpfdofappcollection",
+            "1": "cinarpfdsubscriptioncollection",
+            "2": "cinarnorthboundpfdmanagementcollection",
+            "3": "cinarnorthboundtrafficinfluencecollection",
+            "4": "cinarnorthboundmonitoringeventcollection",
+            "5": "cinarnorthboundafcollection",
+            "6": "cinarnorthboundbdtcollection",
+            "7": "cinarnorthboundassessionwithqoscollection",
+            "8": "cinarnorthboundscsasqosconfigcollection",
+            "9": "cinarnorthbounddevicetriggeringcollection"
+        },
+        "UserName": "cnrusr"
+    },
+    "General": {
+        "ClientCount": "4",
+        "ClientTimeout": "3000",
+        "ConfigurationFile": "settings.json",
+        "ConfigurationPath": ".",
+        "HomePlmnId": {
+            "mcc": "001",
+            "mnc": "01"
+        },
+        "NumberofServingServerThreads": "6",
+        "RetryDiscoveryTimer": "20"
+    },
+    "Logging": {
+        "Directory": "\/var\/log\/cinar\/nef\/",
+        "DisplayLog": "true",
+        "FileName": "NEF",
+        "LogLevel": "DEBUG"
+    },
+    "NONE": {
+        "NEFCallbackPorts": {
+            "MonitoringCallbackPort": "8220",
+            "QosCallbackPort": "8221",
+            "TrafficInflunceCallbackPort": "8222"
+        },
+        "PCF": "null",
+        "RoamingPlmns": "[]",
+        "UDM": "null",
+        "UDR": "null",
+        "allowedNfTypes": {
+            "0": "NEF",
+            "1": "PCF",
+            "2": "UDM",
+            "3": "UDR",
+            "4": "AF"
+        },
+        "allowedNssais": {
+            "0": {
+              
+                "sst": "1"
+            }
+        },
+        "ipv4Addresses": {
+            "0": "10.20.0.13"
+        },
+        "nfInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2137bcb",
+        "nfServices": {
+            "0": {
+                "ipEndPoints": {
+                    "0": {
+                        "ipv4Address": "10.20.0.13",
+                        "port": "8201"
+                    }
+                },
+                "nfServiceStatus": "REGISTERED",
+                "scheme": "http",
+                "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2137bcb",
+                "serviceName": "nnef-pfdmanagement",
+                "versions": {
+                    "0": {
+                        "apiFullVersion": "v1",
+                        "apiVersionInUri": "\/nnef-pfdmanagement\/v1"
+                    }
+                }
+            }
+        },
+        "nfStatus": "REGISTERED",
+        "nfType": "NEF",
+        "sNssais": {
+            "0": {
+                "sst": "1"
+            }
+        }
+    },
+    "NRF": {
+        "0": {
+            "ClientCount": "4",
+            "ClientTimeout": "3000",
+            "DiscServicePort": "8006",
+            "IPAddress": "10.20.0.14",
+            "NfmServicePort": "8001",
+            "NotificationCallbackPort": "8019",
+            "OAuth2ServicePort": "8007",
+            "SubscriberPort": "8089",
+            "TAccessTokenPeriod": "10000",
+            "TCheckPeriod": "60000",
+            "TDiscoveryPeriod": "3000",
+            "TRetryPeriod": "3000"
+        }
+    },
+    "Security": {
+        "JWTAuthenticate": "true",
+        "MutualAuthenticate": "false",
+        "NEFAccessTokenPeriod": "10000",
+        "OAuth2": {
+            "PrivateKey": "certificate\/jwt.key",
+            "PublicKey": "certificate\/jwt.pub"
+        },
+        "TLS": {
+            "PrivateKey": "certificate\/localhost.key",
+            "PublicKey": "certificate\/localhost.crt"
+        },
+        "TLSSecure": "false"
+    },
+    "ServiceSettings": {
+        "AlarmServiceName": "nnef-pfdmanagement",
+        "AsSessionWithQoSSubs": {
+            "AFEventType": {
+                "0": "INDICATION_OF_SUCCESSFUL_RESOURCES_ALLOCATION",
+                "1": "INDICATION_OF_FAILED_RESOURCES_ALLOCATION"
+            }
+        },
+        "NFDiscoveryService": {
+            "TDiscoveryValidityPeriod": "3600000"
+        },
+        "NFManagementService": {
+            "Heartbeat": {
+                "HeartbeatFailureCount": "3",
+                "THeartbeatPeriod": "60000"
+            },
+            "TSubscriberValidityPeriod": "3600000",
+            "TSubscribersCleanupPeriod": "1800000"
+        },
+        "NumberofIOServiceThreads": "6"
+    }
+}

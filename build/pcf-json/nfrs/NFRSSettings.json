@@ -1,0 +1,12 @@
+{
+	"PCFCSHost": "10.20.0.4",
+	"PCFCSPort": 7500,
+	"retryCounter": 3,
+	"PCFCSTlsSecure": true,
+	"PCFCSAccessTokenStatus": false,
+	"connectionTimeout": 1500,
+	"responseTimeout": 1000,
+	"SettingsSubscriptionTimeout": 1,
+	"LogDirectory": "\/var\/log\/cinar\/pcf\/nfrs\/",
+	"PCFNFRSAddress": "10.20.0.7"
+}

@@ -1,0 +1,118 @@
+{
+    "General": {
+        "ClientCount": 27,
+        "ClientTLSMutual": false,
+        "ClientTimeout": 3000,
+        "HSSIP": "",
+        "HSSPort": 4090,
+        "HSSTLSEnabled": false,
+        "HSSThreadCount": 1,
+        "IncrementIndex": 0,
+        "LawfulInterceptionX1IP": "",
+        "LawfulInterceptionX1Port": 5023,
+        "LawfulInterceptionX1TLSEnabled": false,
+        "LawfulInterceptionX1ThreadCount": 1,
+        "LawfulInterceptionX2IP": "",
+        "LawfulInterceptionX2Port": 5024,
+        "LawfulInterceptionX2TLSEnabled": false,
+        "OperatorVariant": "00000000000000000000000000000000",
+        "PrometheusIP": "10.20.0.17",
+        "PrometheusPort": 5019,
+        "PrometheusTLSEnabled": false,
+        "PrometheusThreadCount": 1,
+        "SettingsIP": "10.20.0.17",
+        "SettingsOAuth2Enabled": false,
+        "SettingsPort": 5021,
+        "SettingsTLSEnabled": false,
+        "SettingsTLSMutualAuth": false,
+        "SettingsThreadCount": 1,
+        "SubscriptionIP": "10.20.0.17",
+        "SubscriptionPort": 5020,
+        "SubscriptionTLSEnabled": false,
+        "SubscriptionTLSMutualAuth": false,
+        "SubscriptionThreadCount": 1,
+        "homePlmnId": {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    },
+    "Logging": {
+        "Directory": "/var/log/cinar/udm/",
+        "DisplayLog": false,
+        "FileName": "cnrudm",
+        "LogLevel": "DEBUG"
+    },
+    "Nrf": {
+        "ClientCount": 1,
+        "ClientTimeout": 3000,
+        "DiscServicePort": 8006,
+        "FQDN": "",
+        "IPAddress": "10.20.0.14",
+        "NfmServicePort": 8001,
+        "OAuth2ServicePort": 8007,
+        "TAccessTokenPeriod": 30000,
+        "TCheckPeriod": 60000,
+        "TDiscoveryPeriod": 10000,
+        "TLSMutualAuth": false,
+        "TLSSecure": false,
+        "TRetryPeriod": 10000,
+        "TSubscriptionPeriod": 30000
+    },
+    "Security": {
+        "OAuth2": {
+            "PublicKeyFile": "/opt/cinar/certificate/jwt.pub"
+        },
+        "TLS": {
+            "PrivateKeyFile": "/opt/cinar/certificate/localhost.key",
+            "PublicKeyFile": "/opt/cinar/certificate/localhost.crt"
+        }
+    },
+    "nudm-ee": {
+        "CallbackReference": "/nudm-ee/v1/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 1,
+        "OAuth2Enabled": true,
+        "VersionFull": "1.0.2.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nudm-mt": {
+        "CallbackReference": "/nudm-mt/v1/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 1,
+        "OAuth2Enabled": true,
+        "VersionFull": "1.0.2.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nudm-pp": {
+        "CallbackReference": "/nudm-pp/v1/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 1,
+        "OAuth2Enabled": true,
+        "VersionFull": "1.0.2.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nudm-sdm": {
+        "CallbackReference": "/nudm-sdm/v2/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 8,
+        "OAuth2Enabled": true,
+        "VersionFull": "2.0.1.alpha-1",
+        "VersionInUri": "v2"
+    },
+    "nudm-ueau": {
+        "CallbackReference": "/nudm-ueau/v1/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 8,
+        "OAuth2Enabled": true,
+        "VersionFull": "1.0.1.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nudm-uecm": {
+        "CallbackReference": "/nudm-uecm/v1/on-data-change",
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 8,
+        "OAuth2Enabled": true,
+        "VersionFull": "1.0.2.alpha-1",
+        "VersionInUri": "v1"
+    }
+}

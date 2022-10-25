@@ -1,0 +1,215 @@
+{
+    "date": "2021-Nov-18",
+    "autor": "Auto",
+    "AdditionalNFServices": {
+        "0": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.15",
+                    "port": "8102"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/nssf-configuration\/v1"
+                }
+            }
+        },
+        "1": {
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.15",
+                    "port": "8103"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/nssf-settings\/v1"
+                }
+            }
+        },
+        "2": {
+            "defaultNotificationSubscriptions": "[]",
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.15",
+                    "port": "8104"
+                }
+            },
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/metrics"
+                }
+            }
+        }
+    },
+    "Database": {
+        "ConnectionPoolSize": "4",
+        "ConnectionRetryPeriod": "60000",
+        "ConnectionTimeout": "1000",
+        "DatabaseName": "stonrfcommon",
+        "DatabaseType": "MONGO",
+        "Password": "P5vKG6vE",
+        "Port": 27017,
+        "Server": "10.20.0.3",
+        "ServerSelectionTimeout": "1000",
+        "SocketTimeout": "1000",
+        "Tables": {
+            "0": "cinarnsicollection",
+            "1": "cinarnssrulescollection",
+            "2": "cinarconfigurednssaicollection",
+            "3": "cinaramfavailabilitycollection",
+            "4": "cinarnssfsubscinarcollection"
+        },
+        "UserName": "cnrusr"
+    },
+    "General": {
+        "ClientCount": "4",
+        "ClientTimeout": "3000",
+        "ConfigurationFile": "settings.json",
+        "ConfigurationPath": ".",
+        "HomePlmnId": {
+            "mcc": "001",
+            "mnc": "01"
+        },
+        "NumberofServingServerThreads": "4"
+    },
+    "Logging": {
+        "Directory": "\/var\/log\/cinar\/nssf\/",
+        "DisplayLog": "true",
+        "FileName": "NSSF",
+        "LogLevel": "DEBUG"
+    },
+    "NRF": {
+        "0": {
+            "ClientCount": "4",
+            "ClientTimeout": "3000",
+            "DiscServicePort": "8006",
+            "IPAddress": "10.20.0.14",
+            "NfmServicePort": "8001",
+            "OAuth2ServicePort": "8007",
+            "TAccessTokenPeriod": "10000",
+            "TCheckPeriod": "60000",
+            "TDiscoveryPeriod": "3000",
+            "TRetryPeriod": "3000"
+        }
+    },
+    "NONE": {
+        "RoamingPlmns": "[]",
+        "allowedNfTypes": {
+            "0": "NSSF",
+            "1": "AMF"
+        },
+        "allowedNssais": {
+            "0": {
+                "sst": "1"
+            },
+            "1": {
+                "sst": "2"
+            },
+            "2": {
+                "sst": "3"
+            }
+        },
+        "fqdn": "nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+        "heartBeatTimer": "3",
+        "ipv4Addresses": {
+            "0": "10.20.0.15"
+        },
+        "ipv6Addresses": "[]",
+        "nfInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+        "nfProfileChangesInd": "false",
+        "nfProfileChangesSupportInd": "false",
+        "nfServicePersistence": "false",
+        "nfServices": {
+            "0": {
+                "fqdn": "nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+                "ipEndPoints": {
+                    "0": {
+                        "ipv4Address": "10.20.0.15",
+                        "port": "8100"
+                    }
+                },
+                "nfServiceStatus": "REGISTERED",
+                "scheme": "http",
+                "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+                "serviceName": "nnssf-nsselection",
+                "versions": {
+                    "0": {
+                        "apiFullVersion": "v1",
+                        "apiVersionInUri": "\/nnssf-nsselection\/v1"
+                    }
+                }
+            },
+            "1": {
+                "fqdn": "nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+                "ipEndPoints": {
+                    "0": {
+                        "ipv4Address": "10.20.0.15",
+                        "port": "8101"
+                    }
+                },
+                "nfServiceStatus": "REGISTERED",
+                "scheme": "http",
+                "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+                "serviceName": "nnssf-nssaiavailability",
+                "versions": {
+                    "0": {
+                        "apiFullVersion": "v1",
+                        "apiVersionInUri": "\/nnssf-nssaiavailability\/v1"
+                    }
+                }
+            }
+        },
+        "nfStatus": "REGISTERED",
+        "nfType": "NSSF",
+        "plmnList": {
+            "0": {
+                "mcc": "001",
+                "mnc": "01"
+            }
+        },
+        "sNssais": {
+            "0": {
+                "sst": "1"
+            },
+            "1": {
+                "sst": "2"
+            },
+            "2": {
+                "sst": "3"
+            }
+        }
+    },
+    "Security": {
+        "JWTAuthenticate": "true",
+        "MutualAuthenticate": "false",
+        "OAuth2": {
+            "PrivateKey": "certificate\/jwt.key",
+            "PublicKey": "certificate\/jwt.pub"
+        },
+        "TLSSecure": "false"
+    },
+    "ServiceSettings": {
+        "AlarmServiceName": "nnssf-nsselection",
+        "AvaliabilityService": {
+            "TSubscriberValidityPeriod": "3600000"
+        },
+        "NSSelectionService": {
+            "NssfReroutingOption": "OPTION_A"
+        },
+        "NumberofIOServiceThreads": "6"
+    }
+}

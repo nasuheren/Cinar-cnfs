@@ -1,0 +1,58 @@
+{
+	"connectionTimeout": 1500,
+	"responseTimeout": 1000,
+	"pcfProfile": {
+		"heartBeatTimer" : 1,
+		"plmnList" : [
+			{
+				"mcc" : "286",
+				"mnc" : "01"
+			}
+		],
+		"sNssais" : [
+			{
+				"sd" : "",
+				"sst" : 1
+			},
+			{
+				"sd" : "",
+				"sst" : 2
+			}
+		],
+		"nsiList" : [ "5G Control Plane" ],
+		"fqdn" : "pcf.5gc.mnc01.mcc286.3gppnetwork.org",
+		"interPlmnFqdn" : "pcf.5gc.mnc01.mcc286.3gppnetwork.org",
+		"priority" : 10,
+		"capacity" : 40,
+		"load" : 0,
+		"locality" : "geographic location",
+		"pcfInfo" : {
+			"dnnList" : [ "dnn.test1.com", "dnn.test2.com", "dnn.test3.com" ],
+			"supiRangeList" : [
+				{
+					"end" : "123456789049999",
+					"pattern" : "^imsi-12345678904d{4}$",
+					"start" : "123456789040000"
+				}
+			]
+		},
+		"allowedNfTypes" : [ "AMF", "SMF", "UDR" ],
+		"allowedNssais" : [
+			{
+				"sd" : "",
+				"sst" : 1
+			},
+			{
+				"sd" : "",
+				"sst" : 2
+			}
+		],
+		"allowedPlmns" : [
+			{
+				"mcc" : "286",
+				"mnc" : "01"
+			}
+		]
+	},
+	"NFProfileSubscriptionTimerValue" : 5
+}

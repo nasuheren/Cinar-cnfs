@@ -1,0 +1,196 @@
+{
+    "allowedNfTypes": [
+        "UDM",
+        "AMF",
+        "SMF"
+    ],
+    "allowedNssais": [
+        {
+            "sst": 1
+        },
+        {
+            "sst": 2
+        }
+    ],
+    "allowedPlmns": [
+        {
+            "mcc": "001",
+            "mnc": "002"
+        },
+        {
+            "mcc": "002",
+            "mnc": "001"
+        }
+    ],
+    "ipv4Addresses": [
+        "10.20.0.12"
+    ],
+    "ipv6Addresses": [
+        "::"
+    ],
+    "nfInstanceId": "d3d4f794-8c1f-4ee8-8bb4-f97e1545b9f7",
+    "nfServices": [
+        {
+            "allowedNfTypes": [
+                "UDM",
+                "AMF",
+                "SMF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.12",
+                    "port": 5500,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "196eca9f-6f9b-40e6-a565-c8dbd7316a83",
+            "serviceName": "nausf-auth",
+            "versions": [
+                {
+                    "apiFullVersion": "2.0.1.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "UDM",
+                "AMF",
+                "SMF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.12",
+                    "port": 5501,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "502b6ae6-4365-41ea-bff2-f818cd516dab",
+            "serviceName": "nausf-sorprotection",
+            "versions": [
+                {
+                    "apiFullVersion": "2.0.1.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "UDM",
+                "AMF",
+                "SMF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.12",
+                    "port": 5502,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "ccedda07-27ae-45b9-86c9-1c8afa0e9787",
+            "serviceName": "nausf-upuprotection",
+            "versions": [
+                {
+                    "apiFullVersion": "2.0.1.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        }
+    ],
+    "nfStatus": "REGISTERED",
+    "nfType": "AUSF",
+    "perPlmnSnssaiList": [
+        {
+            "plmnId": {
+                "mcc": "001",
+                "mnc": "002"
+            },
+            "sNssaiList": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ]
+        }
+    ],
+    "plmnList": [
+        {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    ],
+    "recoveryTime": "2022-06-27T12:42:18Z",
+    "sNssais": [
+        {
+            "sst": 1
+        },
+        {
+            "sst": 2
+        },
+        {
+            "sst": 3
+        }
+    ]
+}

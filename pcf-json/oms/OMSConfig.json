@@ -1,0 +1,24 @@
+{
+    "MetricInfo": {
+        "PolicySMAssoReq": {
+            "type": "Counter",
+            "family": "PA",
+            "detail": "Number of PDU Session Establishment Request"
+        },
+        "PolicySMAssoSucc": {
+            "type": "Counter",
+            "family": "PA",
+            "detail": "Number of Successful PDU Session Establishment"
+        },
+        "PolicyAMAssoReq": {
+            "type": "Counter",
+            "family": "PA",
+            "detail": "Number of AM Policy Association Create Request"
+        },
+        "PolicyAMAssoSucc": {
+            "type": "Counter",
+            "family": "PA",
+            "detail": "Number of Successful AM Policy Association"
+        }
+    }
+}

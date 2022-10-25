@@ -1,0 +1,334 @@
+{
+    "allowedNfTypes": [
+        "AUSF",
+        "AMF",
+        "SMF",
+        "UDR",
+        "NEF",
+        "SMSF"
+    ],
+    "allowedNssais": [
+        {
+            "sst": 1
+        },
+        {
+            "sst": 2
+        }
+    ],
+    "allowedPlmns": [
+        {
+            "mcc": "001",
+            "mnc": "002"
+        },
+        {
+            "mcc": "002",
+            "mnc": "001"
+        }
+    ],
+    "ipv4Addresses": [
+        "10.20.0.17"
+    ],
+    "ipv6Addresses": [
+        "::"
+    ],
+    "nfInstanceId": "f39e8528-ae86-4396-b056-9eebf344077d",
+    "nfServices": [
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5000,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "cf34337c-f87b-4fea-8193-a4856840869d",
+            "serviceName": "nudm-uecm",
+            "versions": [
+                {
+                    "apiFullVersion": "1.0.2.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5001,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d271d180-d41e-4507-89ae-d8803fc7aec7",
+            "serviceName": "nudm-sdm",
+            "versions": [
+                {
+                    "apiFullVersion": "2.0.1.alpha-1",
+                    "apiVersionInUri": "v2"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5005,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "8cf64e30-0e12-47b2-97de-362af1027b2b",
+            "serviceName": "nudm-mt",
+            "versions": [
+                {
+                    "apiFullVersion": "1.0.2.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5002,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "baf64bd2-4d59-4cf5-989d-80d9e7218092",
+            "serviceName": "nudm-ueau",
+            "versions": [
+                {
+                    "apiFullVersion": "1.0.1.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5003,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "1fad89cc-813c-4558-b0a0-0e8f153145ed",
+            "serviceName": "nudm-ee",
+            "versions": [
+                {
+                    "apiFullVersion": "1.0.2.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        },
+        {
+            "allowedNfTypes": [
+                "AUSF",
+                "AMF",
+                "SMF",
+                "UDR",
+                "NEF"
+            ],
+            "allowedNssais": [
+                {
+                    "sst": 1
+                },
+                {
+                    "sst": 2
+                }
+            ],
+            "allowedPlmns": [
+                {
+                    "mcc": "001",
+                    "mnc": "002"
+                },
+                {
+                    "mcc": "002",
+                    "mnc": "001"
+                }
+            ],
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.17",
+                    "port": 5004,
+                    "transport": "TCP"
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "f05d8ae7-85ad-4a90-9999-4448db4515cb",
+            "serviceName": "nudm-pp",
+            "versions": [
+                {
+                    "apiFullVersion": "1.0.2.alpha-1",
+                    "apiVersionInUri": "v1"
+                }
+            ]
+        }
+    ],
+    "nfStatus": "REGISTERED",
+    "nfType": "UDM",
+    "perPlmnSnssaiList": [
+        {
+            "plmnId": {
+                "mcc": "001",
+                "mnc": "002"
+            },
+            "sNssaiList": [
+                {
+                    "sst": 1
+                }
+            ]
+        }
+    ],
+    "plmnList": [
+        {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    ],
+    "recoveryTime": "2022-06-27T12:42:15Z",
+    "sNssais": [
+        {
+            "sst": 1
+        },
+        {
+            "sst": 2
+        },
+        {
+            "sst": 3
+        }
+    ]
+}

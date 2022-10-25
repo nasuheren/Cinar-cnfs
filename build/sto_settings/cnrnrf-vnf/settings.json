@@ -1,0 +1,185 @@
+{ "_comment": "The unit for time period is milliseconds.",
+    "date": "2020-Mar-30",
+    "author": "Ozgun AY",
+
+    "General": {
+        "NumberofServingServerThreads": 6,
+        "ClientCount": 4,
+        "ClientTimeout": 500,
+        "HomePlmnId": {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    },
+
+    "Security": {
+        "JWTAuthenticate": false,
+        "MutualAuthenticate": false,
+        "OAuth2": {
+            "PrivateKey": "certificate\/jwt.key",
+            "PublicKey": "certificate\/jwt.pub"
+        },
+        "TLS": {
+            "Certificate": "certificate\/localhost.crt",
+            "PrivateKey": "certificate\/localhost.key"
+        }
+    },
+
+    "Logging": {
+        "Directory": "\/var\/log\/cinar\/nrf\/",
+        "DisplayLog": true,
+        "FileName": "NRF",
+        "LogLevel": "DEBUG"
+    },
+
+    "NRF": [
+        {
+            "IPAddress": "10.20.0.14",
+            "ClientCount": 4,
+            "ClientTimeout": 500,
+            "NfmServicePort": 8001,
+            "DiscServicePort": 8006,
+            "OAuth2ServicePort": 8007,
+            "TAccessTokenPeriod": 3600000,
+            "TCheckPeriod": 60000,
+            "TRetryPeriod": 3000,
+            "ForwarderClientAmount" : 10,
+            "Schema": "http",
+            "ForwardingStatus":false,
+            "SliceMode":false
+        }
+    ],
+
+    "Database": {
+        "DatabaseType": "MONGO",
+        "Server": "10.20.0.3",
+        "Port": 27017,
+        "DatabaseName": "stonrfcommon",
+        "UserName": "cnrusr",
+        "Password": "P5vKG6vE",
+        "ConnectionRetryPeriod": 5000,
+        "Tables": [
+            "cinarnfcollection",
+            "cinarsubscollection",
+            "cinarnfstatecollection"
+        ],
+        "ConnectionPoolSize": 4,
+        "ConnectionTimeout": 1000,
+        "ServerSelectionTimeout": 1000,
+        "SocketTimeout": 1000
+    },
+
+    "AdditionalNFServices": [
+        {
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.14",
+                    "port": 8007
+                }
+            ],
+
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec1",
+
+            "versions": [
+                {
+
+                    "apiVersionInUri": "/oauth2"
+
+                }
+            ]
+        },
+        {
+
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.14",
+
+                    "port": 8009
+
+                }
+            ],
+
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "https",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec2",
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nrf-settings/v1"
+
+                }
+            ]
+        },
+        {
+
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.14",
+
+                    "port": 8010
+
+                }
+            ],
+
+            "nfServiceStatus": "REGISTERED",
+
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec3",
+
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/metrics"
+
+                }
+            ]
+        },
+        {
+
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.14",
+
+                    "port": 8005
+
+                }
+            ],
+
+            "nfServiceStatus": "REGISTERED",
+
+            "scheme": "https",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec4",
+
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/log/v1"
+
+                }
+            ]
+        }
+    ],
+
+    "ServiceSettings": {
+        "AlarmServiceName": "nnrf-nfm",
+        "NumberofIOServiceThreads": 6,
+        "NFManagementService": {
+            "Heartbeat": {
+                "THeartbeatPeriod": 30000,
+                "HeartbeatFailureCount": 3
+            },
+            "TSubscriberValidityPeriod": 3600000,
+            "TSubscribersCleanupPeriod": 1800000
+        },
+        "NFDiscoveryService": {
+            "TDiscoveryValidityPeriod": 3600000
+        }
+    },
+
+    "RoamingPlmns" : [ ]
+
+
+}
+

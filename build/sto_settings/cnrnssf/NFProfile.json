@@ -1,0 +1,94 @@
+{
+    "allowedNfTypes": [
+        "NSSF",
+        "AMF"
+    ],
+    "allowedNssais": [
+        {
+            "sst": 1
+        },
+ {
+            "sst": 2
+        }
+, {
+            "sst": 3
+        }
+
+    ],
+    "heartBeatTimer": 3,
+    "ipv4Addresses": [
+        "10.20.0.15"
+    ],
+    "ipv6Addresses":[], 
+
+    "fqdn":"nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+    "nfInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+    "nfProfileChangesInd": false,
+    "nfProfileChangesSupportInd": false,
+    "nfServicePersistence": false,
+    "nfServices": [
+        {
+            "fqdn":"nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "serviceName": "nnssf-nsselection",
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.15",
+                  
+                    "port": 8100
+                   
+                }
+            ],
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nnssf-nsselection/v1"
+                }
+            ]
+        },
+        {
+            "fqdn":"nssf.5gc.mnc001.mcc001.3gppnetwork.org",
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "http",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "serviceName": "nnssf-nssaiavailability",
+"ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.15",
+       
+                    "port": 8101
+
+                }
+            ],
+
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nnssf-nssaiavailability/v1"
+                }
+            ]
+        }
+    ],
+    "nfStatus": "REGISTERED",
+    "nfType": "NSSF",
+    "sNssais": [
+        {
+            "sst": 1
+        }, {
+            "sst": 2
+        },
+ {
+            "sst": 3
+        }
+
+
+    ],
+    "plmnList": [
+        {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    ]
+}

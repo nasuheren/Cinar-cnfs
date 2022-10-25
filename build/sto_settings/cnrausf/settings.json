@@ -1,0 +1,78 @@
+{
+    "General": {
+        "ClientCount": 16,
+        "ClientTLSMutual": false,
+        "ClientTimeout": 3000,
+        "PrometheusIP": "0.0.0.0",
+        "PrometheusPort": 5520,
+        "PrometheusTLSEnabled": false,
+        "PrometheusThreadCount": 1,
+        "SettingsIP": "10.20.0.12",
+        "SettingsOAuth2Enabled": false,
+        "SettingsPort": 5521,
+        "SettingsTLSEnabled": false,
+        "SettingsTLSMutualAuth": false,
+        "SettingsThreadCount": 1,
+        "SubscriptionIP": "10.20.0.12",
+        "SubscriptionPort": 5522,
+        "SubscriptionTLSEnabled": false,
+        "SubscriptionTLSMutualAuth": false,
+        "SubscriptionThreadCount": 1,
+        "homePlmnId": {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    },
+    "Logging": {
+        "Directory": "/var/log/cinar/ausf/",
+        "DisplayLog": false,
+        "FileName": "cnrausf",
+        "LogLevel": "DEBUG"
+    },
+    "Nrf": {
+        "ClientCount": 1,
+        "ClientTimeout": 3000,
+        "DiscServicePort": 8006,
+        "FQDN": "",
+        "IPAddress": "10.20.0.14",
+        "NfmServicePort": 8001,
+        "OAuth2ServicePort": 8007,
+        "TAccessTokenPeriod": 1000,
+        "TCheckPeriod": 60000,
+        "TDiscoveryPeriod": 3000,
+        "TLSMutualAuth": false,
+        "TLSSecure": false,
+        "TRetryPeriod": 3000,
+        "TSubscriptionPeriod": 10000
+    },
+    "Security": {
+        "OAuth2": {
+            "PublicKeyFile": "/opt/cinar/certificate/jwt.pub"
+        },
+        "TLS": {
+            "PrivateKeyFile": "/opt/cinar/certificate/localhost.key",
+            "PublicKeyFile": "/opt/cinar/certificate/localhost.crt"
+        }
+    },
+    "nausf-auth": {
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 8,
+        "OAuth2Enabled": true,
+        "VersionFull": "2.0.1.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nausf-sorprotection": {
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 1,
+        "OAuth2Enabled": true,
+        "VersionFull": "2.0.1.alpha-1",
+        "VersionInUri": "v1"
+    },
+    "nausf-upuprotection": {
+        "MutualAuthenticate": false,
+        "NumberOfServiceThreads": 1,
+        "OAuth2Enabled": true,
+        "VersionFull": "2.0.1.alpha-1",
+        "VersionInUri": "v1"
+    }
+}

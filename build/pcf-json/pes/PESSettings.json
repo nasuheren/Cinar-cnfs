@@ -1,0 +1,14 @@
+{
+    "PCFCSHost": "10.20.0.4",
+    "PCFCSPort": 7500,
+    "LogDirectory": "\/var\/log\/cinar\/pcf\/pes\/",
+    "PCFCSTlsSecure": true,
+    "PCFCSMutualAuthenticate": false,
+    "SettingsSubscriptionTimeout": 5,
+    "CSSubscriptionConnectionRetryTimer": 10,
+    "PCFPESAddress": "10.20.0.8",
+    "PCFPESPort": 7008,
+    "SmPolicyHeapOperations": true,
+    "AmPolicyHeapOperations":true,
+    "NumOfConcurrencyThreads" : 8
+}

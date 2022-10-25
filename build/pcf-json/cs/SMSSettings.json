@@ -1,0 +1,31 @@
+{
+    "database": {
+        "ConnectionPoolSize": 10,
+        "DatabaseName": "cinarpcftest",
+        "DatabaseType": "mongodb",
+        "Port": 27017,
+        "Server": "10.20.0.3"
+    },
+    "logging": {
+        "Directory": "/var/log/cinar/pcf/sms/",
+        "LogLevel": "INFO"
+    },
+    "smsSettings": {
+        "k8SActive": false,
+        "serviceInstanceId": "c41d3d3f-bcf1-4249-9831-2bb7c8f9501e",
+        "smsSubscriptionNotifyCallbackServerPort": 7004,
+        "smsTimers": {
+            "connectionControlTimer": 7,
+            "connectionTimeout": 1500,
+            "smPerfMeasDataProcessTimeInterval": 500,
+            "smPolicyControlDeleteWaitTimeout": 500,
+            "subscriptionFailedTimeout": 5,
+            "usageMonDataPatchRetryTimeout": 10
+        },
+        "versions": {
+            "apiFullVersion": "1.0.0.alpha-1",
+            "apiVersionInUri": "v1",
+            "expiry": "2022-02-15T10:43:23Z"
+        }
+    }
+}

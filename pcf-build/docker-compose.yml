@@ -1,0 +1,419 @@
+version: '3.8'
+
+networks:
+    Control:
+      driver: bridge
+      driver_opts:
+        com.docker.network.enable_ipv6: "true"
+      ipam:
+        config:
+          - subnet: 10.20.0.0/24
+            gateway: 10.20.0.1
+          #- subnet: "2001:3984:3989::/64"
+          #  gateway: "2001:3984:3989::1"
+
+    Data:
+      driver: bridge
+      driver_opts:
+        com.docker.network.enable_ipv6: "true"
+      ipam:
+        config:
+          - subnet: 10.30.0.0/24
+            gateway: 10.30.0.1
+          #- subnet: "2001:3984:3989::/64"
+          #  gateway: "2001:3984:3989::1"
+      
+    Public:
+      driver: bridge
+      driver_opts:
+        com.docker.network.enable_ipv6: "true"
+      ipam:
+        config:
+          - subnet: 10.40.0.0/24
+            gateway: 10.40.0.1
+          #- subnet: "2001:3984:3989::/64"
+          #  gateway: "2001:3984:3989::1"
+
+services:
+    pcfcs:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/cnrpcfcs_0.0.0.0_amd64_files/files/
+      image: "cnrpcfcs:0.0.0.0"
+      container_name: cn_cnrpcfcs
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/AMSSettings.json:/opt/cinar/pcf/cs/AMSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/CommonData.json:/opt/cinar/pcf/cs/CommonData.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/PESSettings.json:/opt/cinar/pcf/cs/PESSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/CSSettings.json:/opt/cinar/pcf/cs/CSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/NFRSSettings.json:/opt/cinar/pcf/cs/NFRSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/cs/SMSSettings.json:/opt/cinar/pcf/cs/SMSSettings.json
+      ports:
+        - "7050:7050"
+        - "7500:7500" 
+      networks:
+          Control:
+            ipv4_address: 10.20.0.4
+      depends_on:
+        - mongodb
+            
+    pcfams:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/ams/files/
+      image: "cnrpcfams:0.0.0.0"
+      container_name: cn_cnrpcfams
+      # command: sleep 10 && ./cnrpcfams
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/ams/AMSSettings.json:/opt/cinar/pcf/ams/AMSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/ams/AMSConfig.json:/opt/cinar/pcf/ams/AMSConfig.json
+      ports:
+        - "7000:7000"
+        - "7001:7001"
+        - "7010:7010"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.5
+      depends_on:
+        - mongodb
+        - pcfcs
+            
+    pcfsms:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/sms/files
+      image: "cnrpcfsms:0.0.0.0"
+      container_name: cn_cnrpcfsms
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/sms/SMSSettings.json:/opt/cinar/pcf/sms/SMSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/sms/SMSConfig.json:/opt/cinar/pcf/sms/SMSConfig.json
+      ports:
+        - "7002:7002"
+        - "7003:7003"
+        - "7004:7004"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.6
+      depends_on:
+        - mongodb
+        - pcfcs
+            
+    pcfnfrs:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/nfrs/files
+      image: "cnrpcfnfrs:0.0.0.0"
+      container_name: cn_cnrpcfnfrs
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/nfrs/NFRSSettings.json:/opt/cinar/pcf/nfrs/NFRSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/nfrs/NFRSConfig.json:/opt/cinar/pcf/nfrs/NFRSConfig.json
+      ports:
+        - "7080:7080"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.7
+      depends_on:
+        - mongodb
+        - pcfcs
+            
+    pcfpes:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/pes/files
+      image: "cnrpcfpes:0.0.0.0"
+      container_name: cn_cnrpcfpes
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/pes/PESSettings.json:/opt/cinar/pcf/pes/PESSettings.json
+      ports:
+        - "7008:7008"
+        - "7051:7051"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.8
+      depends_on:
+        - mongodb
+        - pcfcs
+            
+    pcfiws:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/iws/files
+      image: "cnrpcfiws:0.0.0.0"
+      container_name: cn_cnrpcfiws
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/iws/Settings.json:/opt/cinar/pcf/iws/Settings.json
+      ports:
+        - "7020:7020"
+        - "3868:3868"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.9
+      depends_on:
+        - mongodb
+        - pcfcs
+            
+    pcfoms:
+      build: /home/ubuntu/Cinar-cnfs/pcf-build/oms/files
+      image: "cnrpcfoms:0.0.0.0"
+      container_name: cn_cnrpcfoms
+      privileged: true
+      volumes:
+        - /home/ubuntu/Cinar-cnfs/pcf-json/oms/OMSSettings.json:/opt/cinar/pcf/oms/OMSSettings.json
+        - /home/ubuntu/Cinar-cnfs/pcf-json/oms/OMSConfig.json:/opt/cinar/pcf/oms/OMSConfig.json
+      ports:
+        - "7052:7052"
+        - "8104:8104"
+      networks:
+          Control:
+            ipv4_address: 10.20.0.10
+      depends_on:
+        # - pcfmongodb
+        - pcfcs
+
+    mongodb:
+      image: mongo:latest
+      container_name: mongo
+      environment:
+        MONGO_INITDB_ROOT_PASSWORD: "P5vKG6vE"
+        MONGO_INITDB_ROOT_USERNAME: "cnrusr"
+        MONGODB_INITDB_DATABASE: "admin"
+        NEW_DATABASE_NAME: "stonrfcommon"
+      networks:  
+        Control:
+          ipv4_address: 10.20.0.3
+      ports:
+        - "27017:27017"    
+
+    postgredb:
+      image: postgres:latest
+      container_name: postgre
+      environment:
+        POSTGRES_USER: "cnrusr"
+        POSTGRES_PASSWORD: "P5vKG6vE"
+      networks:
+        Control:
+          ipv4_address: 10.20.0.2
+      ports:
+        - '5432:5432'
+     
+  #  pcfmongodb:
+  #    image: "mongo:focal"
+  #    container_name: cn_pcfmongodb
+  #    environment:
+  #      MONGODB_INITDB_DATABASE: "admin"
+  #      NEW_DATABASE_NAME: "stopcf"      
+  #    networks:
+  #      Control:
+  #        ipv4_address: 10.20.0.3
+  #    ports:
+  #      - "27017:27017"
+        
+    tcpdump:
+      image: nicolaka/netshoot
+      volumes:
+       - ./mongo-init/pcap/:/pcap
+      command: tcpdump -w /pcap/capture.pcap   
+      network_mode: service:pcfams
+      depends_on: 
+        - pcfams
+
+    cnramf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnramf/
+      image: "cnramf:latest"
+      container_name: cnramf
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnramf/settings.json:/opt/cinar/amf/settings.json 
+      networks:
+          Control:
+            ipv4_address: 10.20.0.11
+          Public:
+            ipv4_address: 10.40.0.3
+
+    cnrausf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrausf/
+      image: "cnrausf:latest"
+      container_name: cnrausf
+      privileged: true
+      command:
+        apt-get install -y cnrausf
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrausf/settings.json:/opt/cinar/ausf/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrausf/NFProfile.json:/opt/cinar/ausf/NFProfile.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.12
+        
+    cnrnef:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrnef/
+      image: "cnrnef:latest"
+      container_name: cnrnef
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnef/settings.json:/opt/cinar/nef/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnef/settings_automated.json:/opt/cinar/nef/settings_automated.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.13
+
+    cnrnrf-vnf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrnrf-vnf/
+      image: "cnrnrf-vnf:latest"
+      container_name: cnrnrf-vnf
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnrf-vnf/settings.json:/opt/cinar/nrf/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnrf-vnf/settings_automated.json:/opt/cinar/nrf/settings_automated.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnrf-vnf/NFProfile.json:/opt/cinar/nrf/NFProfile.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.14
+
+    cnrnssf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrnssf/
+      image: "cnrnssf:latest"
+      container_name: cnrnssf
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnssf/settings.json:/opt/cinar/nssf/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnssf/settings_automated.json:/opt/cinar/nssf/settings_automated.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrnssf/NFProfile.json:/opt/cinar/nssf/NFProfile.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.15
+
+    cnrsmf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrsmf/
+      image: "cnrsmf:latest"
+      container_name: cnrsmf
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrsmf/settings.json:/opt/cinar/smf/settings.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.16
+
+    cnrudm:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrudm/
+      image: "cnrudm:latest"
+      container_name: cnrudm
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrudm/settings.json:/opt/cinar/udm/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrudm/NFProfile.json:/opt/cinar/udm/NFProfile.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.17 
+
+    cnrudr:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrudr/
+      image: "cnrudr:latest"
+      container_name: cnrudr
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrudr/settings.json:/opt/cinar/udr/settings.json
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrudr/NFProfile.json:/opt/cinar/udr/NFProfile.json
+      networks:
+          Control:
+            ipv4_address: 10.20.0.18
+
+    cnrupf:
+      build: /home/ubuntu/Cinar-cnfs/cnr-build/cnrupf/
+      image: "cnrupf:latest"
+      container_name: cnrupf
+      privileged: true
+      volumes:
+       - /home/ubuntu/Cinar-cnfs/build/sto_settings/cnrupf/cnrupf.conf:/opt/cinar/udm/cnrupf.conf
+      networks:
+          Control:
+            ipv4_address: 10.20.0.19
+          Data:
+            ipv4_address: 10.30.0.2
+          Public:
+            ipv4_address: 10.40.0.2
+
+    # nrfmongodb:
+      # image: "mongo:focal"
+      # container_name: cn_nrfmongodb
+      # environment:
+        # MONGODB_INITDB_DATABASE: "admin"
+        # NEW_DATABASE_NAME: "cinarnrftest"
+        # MONGO_INITDB_ROOT_USERNAME: cnrusr
+        # MONGO_INITDB_ROOT_PASSWORD: P5vKG6vE
+      # volumes:
+       # - ./mongo-init/nrf_init.js:/docker-entrypoint-initdb.d/init.js:ro
+      
+      # networks:
+        # 5G_CN_PCF_Local_Network:
+          # ipv4_address: 10.20.0.2
+      # ports:
+        # - "27018:27017"    
+        
+    # pgdb:
+      # container_name: pgdb
+      # image: postgres:10.14
+      # command: 
+        # - -c
+        # - config_file=/etc/postgresql/postgresql.conf
+        # - -c
+        # - log_statement=all
+        # - -c 
+        # - logging_collector=on 
+      # restart: always
+      # healthcheck:
+          # interval: 10s
+          # test: ["CMD", "/healthcheck.sh"]
+          # timeout: 5s
+          # retries: 5
+      # environment:
+        # POSTGRES_USER: "cnrusr"
+        # POSTGRES_PASSWORD: P5vKG6vE
+        # POSTGRES_DB: newstodb
+        # POSTGRES_HOST_AUTH_METHOD: md5
+      # ports:
+        # - "0.0.0.0:5432:5432"
+      # volumes:
+        # - ./pgsql/volume/healthcheck.sh:/healthcheck.sh
+        # - ./pgsql/volume/postgresql.conf:/etc/postgresql/postgresql.conf
+        # - ./pgsql/volume/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      # networks:
+        # 5G_CN_PCF_Local_Network:
+          # ipv4_address: 10.20.0.12
+          
+    # nrf:
+      # container_name: nrf
+      # build:
+        # context: ./nrf
+        # dockerfile: ./Dockerfile-nrf
+      # pull_policy: missing
+      # image: cinar/nrf
+      # privileged: true
+      # ports:
+        # - "8000-8015:8000-8015"
+      # volumes:
+        # - ./nrf/volume/settings.json:/opt/cinar/nrf/settings.json
+        # - ./nrf/volume/NFProfile.json:/opt/cinar/nrf/NFProfile.json
+        # - ./nrf/volume/certificate:/opt/cinar/nrf/certificate
+      # depends_on:
+        # - pcfmongodb
+      # networks:
+        # 5G_CN_PCF_Local_Network:
+          # ipv4_address: 10.20.0.14
+
+    # udr:
+      # container_name: udr
+      # build:
+        # context: ./udr
+        # dockerfile: ./Dockerfile-udr
+      # image: cinar/udr
+      # privileged: true
+      # ports:
+        # - "5400-5425:5400-5425"
+      # volumes:
+        # - ./udr/volume/settings.json:/opt/cinar/udr/settings.json
+        # - ./udr/volume/NFProfile.json:/opt/cinar/udr/NFProfile.json
+        # - ./udr/volume/certificate:/opt/cinar/certificate
+      # depends_on:
+        # pgdb:
+          # condition: service_healthy
+        # nrf:
+          # condition: service_started
+      # links:
+        # - pgdb
+      # networks:
+        # 5G_CN_PCF_Local_Network:
+          # ipv4_address: 10.20.0.15

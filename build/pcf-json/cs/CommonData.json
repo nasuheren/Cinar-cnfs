@@ -1,0 +1,46 @@
+{
+    "nrfSettings": {
+        "nrfNFDiscoveryApiHost": "10.20.0.14",
+        "nrfNFDiscoveryApiPort": 8006,
+        "nrfNFManagementApiHost": "10.20.0.14",
+        "nrfNFManagementApiPort": 8001,
+        "nrfNotificationServerHost": "10.20.0.6",
+        "nrfNotificationServerSmsPort": 7003,
+        "nrfOAuth2ApiHost": "10.20.0.14",
+        "nrfOAuth2ApiPort": 8007,
+	    "nrfNotificationServerAmsPort": 7001
+    },
+    "pcfMicroServices": {
+        "pcfMicroservicesSettings": [
+            {
+                "pcfMicroServiceHost": "10.20.0.10",
+                "pcfMicroServiceName": "npcf-operation-maintenance",
+                "pcfMicroServicePort": 7052
+            },
+            {
+                "pcfMicroServiceHost": "10.20.0.8",
+                "pcfMicroServiceName": "npcf-policyengine",
+                "pcfMicroServicePort": 7008
+            },
+	    {
+                "pcfMicroServiceHost": "10.20.0.4",
+                "pcfMicroServiceName": "npcf-configuration",
+                "pcfMicroServicePort": 7050
+	    },
+            {
+                "pcfMicroServiceHost": "10.20.0.9",
+                "pcfMicroServiceName": "npcf-interworking",
+                "pcfMicroServicePort": 7020
+            }
+        ]
+    },    
+    "security": {
+        "JWTAuthenticate": true,
+        "MutualAuthenticate": false,
+        "TLS": {
+            "PrivateKey": "certificate/localhost.key",
+            "PublicKey": "certificate/localhost.crt"
+        },
+        "TLSSecure": false
+    }
+}

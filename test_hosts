@@ -1,0 +1,2 @@
+[test_servers]
+192.168.13.29    ansible_become_pass=1 ansible_user=ubuntu ansible_ssh_pass=test123

@@ -1,0 +1,24 @@
+{
+    "database": {
+        "ConnectionPoolSize": 10,
+        "DatabaseName": "cinarpcftest",
+        "DatabaseType": "mongodb",
+        "Port": 27017,
+        "Server": "10.20.0.3"
+    },
+    "logging": {
+        "Directory": "/var/log/cinar/pcf/pes/",
+        "LogLevel": "INFO"
+    },
+    "pesSettings": {
+        "accessTokenStatus": false,
+        "k8SActive": false,
+        "pesSubscriptionNotifyCallbackServerPort": 7051,
+        "serviceInstanceId": "",
+        "versions": {
+            "apiFullVersion": "1.0.0.alpha-1",
+            "apiVersionInUri": "v1",
+            "expiry": "2022-02-15T10:43:23Z"
+        }
+    }
+}

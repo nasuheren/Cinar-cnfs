@@ -1,0 +1,139 @@
+{
+    "_comment": "The unit for time period is milliseconds.",
+    "date": "2020-Apr-13",
+    "author": "Merve KESENBAS",
+    "General": {
+        "NumberofServingServerThreads": 4,
+        "ClientCount": 4,
+        "ClientTimeout": 500,
+        "HomePlmnId": {
+            "mcc": "001",
+            "mnc": "002"
+        }
+    },
+    "Security": {
+        "TLSSecure":false,
+        "JWTAuthenticate": true,
+        "MutualAuthenticate": false,
+        "OAuth2": {
+            "PrivateKey": "certificate\/jwt.key",
+            "PublicKey": "certificate\/jwt.pub"
+        },
+        "TLS": {
+            "Certificate": "certificate\/nf.crt",
+            "PrivateKey": "certificate\/nf-key.crt"
+        }
+    },
+    "Logging": {
+        "Directory": "\/var\/log\/cinar\/nssf\/",
+        "DisplayLog": true,
+        "FileName": "NSSF",
+        "LogLevel": "DEBUG"
+    },
+    "NRF": [
+        {
+            "IPAddress": "10.20.0.14",
+            "ClientCount": 4,
+            "ClientTimeout": 3000,
+            "NfmServicePort": 8001,
+            "DiscServicePort": 8006,
+            "OAuth2ServicePort": 8007,
+            "TAccessTokenPeriod": 10000,
+            "TCheckPeriod": 60000,
+            "TDiscoveryPeriod": 3000,
+            "TRetryPeriod": 3000
+        }
+    ],
+    "Database": {
+        "DatabaseType": "MONGO",
+        "Server": "10.20.0.3",
+        "Port": 27017,
+        "DatabaseName":"stonrfcommon",
+        "UserName": "cnrusr",
+        "Password": "P5vKG6vE",
+        "ConnectionRetryPeriod": 60000,
+        "Tables": [
+            "cinarnsicollection",
+            "cinarnssrulescollection",
+            "cinarconfigurednssaicollection",
+            "cinaramfavailabilitycollection",
+            "cinarnssfsubscinarcollection"
+        ],
+        "ConnectionPoolSize": 4,
+        "ConnectionTimeout": 1000,
+        "ServerSelectionTimeout": 1000,
+        "SocketTimeout": 1000
+    },
+    "AdditionalNFServices": [
+        {
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.15",
+
+                    "port": 8102
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "https",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nssf-configuration/v1"
+                }
+            ]
+        },
+        {
+            "ipEndPoints": [
+                {
+                    "ipv4Address": "10.20.0.15",
+
+                    "port": 8103
+                }
+            ],
+            "nfServiceStatus": "REGISTERED",
+            "scheme": "https",
+            "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nssf-settings/v1"
+                }
+            ]
+        },
+
+    {
+      "defaultNotificationSubscriptions": [
+      ],
+      "ipEndPoints": [
+        {
+          "ipv4Address": "10.20.0.15",
+
+          "port": 8104
+        }
+      ],
+      "nfServiceStatus": "REGISTERED",
+      "scheme": "http",
+      "serviceInstanceId": "81fdab8a-8605-11ea-bc55-0242ac130003",
+      "versions": [
+        {
+          "apiFullVersion": "v1",
+          "apiVersionInUri": "/metrics"
+        }
+      ]
+    }
+    ],
+    "ServiceSettings": {
+        "AlarmServiceName": "nnssf-nsselection",
+        "NumberofIOServiceThreads": 6,
+        "NSSelectionService": {
+            "NssfReroutingOption": "OPTION_A"
+        },
+    "AvaliabilityService": {
+      "TSubscriberValidityPeriod": 3600000
+    }
+    },
+    "RoamingPlmns": [
+  
+    ]
+}

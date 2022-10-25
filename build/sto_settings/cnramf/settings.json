@@ -1,0 +1,30 @@
+{
+    "settings": {
+        "AMFServicesConfigurations": {
+            "amfPointer": "63",
+            "timerValues": {
+                "useDefaultValues": "false",
+                "mrtValue": "30",
+                "idtValue": "30",
+                "t3512TimerUnit": "5",
+                "t3512TimerValue": "2"
+            },
+            "nfInstanceId": "7aca7bd0-1826-4887-8f0e-57fb2f058463"
+        },
+        "LogConfigurations": {
+            "DisplayLog": "true",
+            "LogLevel": "INFO"
+        },
+        "generalParameters": {
+            "DBSettings": {
+                "dbname": "stonrfcommon",
+                "dbtype": "MONGO",
+                "host": "10.20.0.3",
+                "password": "P5vKG6vE",
+                "port": 27017,
+                "username": "cnrusr"
+            },
+            "authJwtPublicKey": "true"
+        }
+    }
+}

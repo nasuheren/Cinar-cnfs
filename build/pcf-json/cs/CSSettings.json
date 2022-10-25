@@ -1,0 +1,42 @@
+{
+	"ServiceSettings": {
+		"ServiceInstanceID": "09f9da6a-d6a5-4418-8773-20ea8745fea7",
+		"PCFInstanceId": "bce5a899-eb50-46e9-9645-21bd17316cd7",
+		"Versions": [
+			{
+				"APIVersionInUri": "v1",
+				"APIFullVersion": "1.0.0.alpha-1",
+				"Expiry": "2020-Feb-15T10:43:23Z"
+			}
+		],
+		"IPEndPoints": [
+			{
+				"IPv4Address": "10.20.0.4",
+				"IPv6Address": "",
+				"Port": 7050,
+				"Transport": "TCP"
+			}
+		],
+		"Scheme": "http",
+		"SSLCertificateKeyFile": "certificate/localhost.key",
+		"SSLCertificateFile": "certificate/localhost.crt",
+		"LogDirectory": "\/var\/log\/cinar\/pcf\/cs\/",
+		"accessTokenStatus": false,
+		"K8SActive": false,
+		"PeriodicSchedulerTimer": 30,
+		"PCFSMSIpAddress" : "10.20.0.6",
+		"PCFSMSPort" : 7004,
+		"PCFNBIPort": 7500
+	},
+	"DBSettings": {
+		"dbtype": "mongodb",
+		"host": "10.20.0.3",
+		"port": 27017,
+		"dbname": "cinarpcftest",
+		"minPoolSize": 4,
+		"maxPoolSize": 4
+	},
+	"logging": {
+        "LogLevel": "INFO"
+    }
+}

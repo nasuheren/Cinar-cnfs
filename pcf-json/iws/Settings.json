@@ -1,0 +1,32 @@
+{
+	"ServiceSettings": {
+		"ServiceInstanceID": "c41d3d3f-bcf1-4249-9831-2bb7c8f9502a",
+		"Versions": [
+			{
+				"APIVersionInUri": "v1",
+				"APIFullVersion": "1.0.0.alpha-1",
+				"Expiry": "2020-Feb-15T10:43:23Z"
+			}
+		],
+		"IPEndPoints": [
+			{
+				"IPv4Address": "10.20.0.9",
+				"IPv6Address": "",
+				"Port": 7020,
+				"Transport": "TCP"
+			}
+		],
+		"Scheme": "https",
+		"SSLCertificateKeyFile": "certificate/localhost.key",
+		"SSLCertificateFile": "certificate/localhost.crt",
+		"accessTokenStatus": false,
+		"LogDirectory": "\/var\/log\/cinar\/pcf\/iws\/",
+		"K8SActive" : false,
+		"smsHost" : "10.20.0.6",
+		"smsPort" : 7002,
+		"smsClientTLSSecure" : true,
+		"numOfClientThreads" : 4,
+		"connectionTimeout" : 1000,
+		"responseTimeout" : 6000
+	}
+}

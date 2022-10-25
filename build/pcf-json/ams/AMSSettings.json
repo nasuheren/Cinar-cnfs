@@ -1,0 +1,15 @@
+{
+	"PCFCSHost": "10.20.0.4",
+	"PCFCSPort": 7500,
+	"LogDirectory": "\/var\/log\/cinar\/pcf\/ams\/",
+	"DisplayLog": true,
+	"PCFCSTlsSecure": true,
+	"PCFCSMutualAuthenticate": false,
+	"AMFMsgRetryCount" : 3,
+	"SettingsSubscriptionTimeout": 5,
+	"CSSubscriptionConnectionRetryTimer": 10,
+	"NumOfConcurrencyThreads" : 8,
+	"PCFAMSAddress": "10.20.0.5",
+	"PCFAMSPort": 7000,
+    "CSSubscriptionEnabled": true
+}

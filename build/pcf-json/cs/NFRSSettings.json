@@ -1,0 +1,26 @@
+{
+    "database": {
+        "ConnectionPoolSize": 2,
+        "ConnectionRetryPeriod": 1,
+        "ConnectionTimeout": 1,
+        "DatabaseName": "cinarpcftest",
+        "DatabaseType": "mongodb",
+        "Port": 27017,
+        "Server": "10.20.0.3",
+        "Tables": []
+    },
+    "logging": {
+        "Directory": "/var/log/cinar/pcf/nfrs/",
+        "LogLevel": "INFO"
+    },
+    "nfrsSettings": {
+        "accessTokenStatus": true,
+        "k8SActive": false,
+        "nfrsNFUpdateNotifyCallbackServerPort": 7080,
+        "nfrsTimers": {
+            "connectionTimeout": 1500,
+            "nfProfileSubscriptionTimerValue": 5,
+            "responseTimeout": 1000
+        }
+    }
+}

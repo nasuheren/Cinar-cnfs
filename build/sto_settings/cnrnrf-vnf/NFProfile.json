@@ -1,0 +1,102 @@
+{
+   
+    "allowedNfTypes": [
+        "NRF"
+    ],
+    "allowedNssais": [
+        {
+            "sst": 1
+        },
+{
+            "sst": 2
+        }
+,
+{
+            "sst": 3
+        }
+
+    ],
+    
+	"ipv4Addresses": [
+        "172.17.0.2"
+    ],  
+   
+    "load": 0,
+    
+    "nfInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec9",
+   
+    "nfServices": [
+        {
+           
+            "ipEndPoints": [
+                {
+		    "ipv4Address":"10.20.0.14",
+                  
+                    "port": 8001
+                    
+                }
+            ],
+           
+            "nfServiceStatus": "REGISTERED",
+           
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec8",
+            "serviceName": "nnrf-nfm",
+           
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nnrf-nfm/v1"
+                   
+                }
+            ]
+        },
+        {
+      
+            "ipEndPoints": [
+                {	
+                    "ipv4Address":"10.20.0.14",
+		
+                   
+                    "port": 8006
+                   
+                }
+            ],
+            
+            "nfServiceStatus": "REGISTERED",
+            
+       
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ec7",
+            "serviceName": "nnrf-disc",
+         
+            "versions": [
+                {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "/nnrf-disc/v1"
+                   
+                }
+            ]
+        }
+    ],
+    "nfStatus": "REGISTERED",
+    "nfType": "NRF",
+ 
+    "plmnList": [{"mcc" : "001", "mnc" : "002"}],
+  
+
+    "sNssais": [
+        {
+            "sst": 1
+        },
+{
+            "sst": 2
+        }
+,
+{
+            "sst": 3
+        }
+
+    ]
+   
+}

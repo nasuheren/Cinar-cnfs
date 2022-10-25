@@ -1,0 +1,39 @@
+{
+	"policyControlRequestTriggers": ["US_RE", "SAREA_CH"],
+	"udrSubscriptionSupport": true,
+	"udrSmDataQuerySupport": true,
+	"chfSubscriptionSupport": false,
+	"CHFHost": "192.168.56.1",
+	"CHFPort": 15000,
+	"smfSuppFeat" : {
+		"TSC" : true,
+		"ResShare" : false,
+		"3GPP-PS-Data-Off" : false,
+		"ADC" : false,
+		"UMC" : true,
+		"NetLoc" : false,
+		"RAN-NAS-Cause" : true,
+		"ProvAFsignalFlow" : false,
+		"PCSCF-Restoration-Enhancement" : false,
+		"PRA" : false,
+		"RuleVersioning" : false,
+		"SponsoredConnectivity" : false,
+		"RAN-Support-Info" : false,
+		"PolicyUpdateWhenUESuspends" : false,
+		"SessionRuleErrorHandling" : false
+	},
+	"udrSuppFeat" : {
+		"DomainNameProtocol" : false,
+		"ResourceRemovalNotificationPolicyData" : true,
+		"ResourceNotificationExposureDataFix" : false
+	},
+	"afSuppFeat" : {
+		"InfluenceOnTrafficRouting" : true,
+		"SponsoredConnectivity" : false,
+		"MediaComponentVersioning" : false
+	},
+	"chfSuppFeat" : {
+		"SubscriptionExpirationTimeControl" : false
+	},
+	"trafficInfluenceUDRSupport": true
+}

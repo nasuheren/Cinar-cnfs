@@ -1,0 +1,9 @@
+{
+	"udrSubscriptionSupport": true,
+	"udrQuerySupport": true,
+	"udrSuppFeat" : {
+		"DomainNameProtocol" : false,
+		"ResourceRemovalNotificationPolicyData" : true,
+		"ResourceNotificationExposureDataFix" : false
+	}
+}

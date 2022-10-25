@@ -1,0 +1,433 @@
+{
+    "date": "2021-Mar-02",
+    "autor": "Auto",
+    "AdditionalNFServices": {
+        "0": {
+            "allowedNfDomains": "[]",
+            "allowedNfTypes": "[]",
+            "allowedNssais": "[]",
+            "allowedPlmns": "[]",
+            "apiPrefix": "",
+            "capacity": "0",
+            "defaultNotificationSubscriptions": "[]",
+            "fqdn": "",
+            "interPlmnFqdn": "",
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.14",
+                    "ipv6Address": "",
+                    "port": "8005",
+                    "transport": ""
+                }
+            },
+            "load": "0",
+            "nfServiceStatus": "REGISTERED",
+            "priority": "0",
+            "recoveryTime": "",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+            "serviceName": "",
+            "supportedFeatures": "",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v2",
+                    "apiVersionInUri": "\/log\/v2",
+                    "expiry": ""
+                }
+            }
+        },
+        "1": {
+            "allowedNfDomains": "[]",
+            "allowedNfTypes": "[]",
+            "allowedNssais": "[]",
+            "allowedPlmns": "[]",
+            "apiPrefix": "",
+            "capacity": "0",
+            "defaultNotificationSubscriptions": "[]",
+            "fqdn": "",
+            "interPlmnFqdn": "",
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.14",
+                    "ipv6Address": "",
+                    "port": "8007",
+                    "transport": ""
+                }
+            },
+            "load": "0",
+            "nfServiceStatus": "REGISTERED",
+            "priority": "0",
+            "recoveryTime": "",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+            "serviceName": "",
+            "supportedFeatures": "",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "",
+                    "apiVersionInUri": "\/oauth2",
+                    "expiry": ""
+                }
+            }
+        },
+        "2": {
+            "allowedNfDomains": "[]",
+            "allowedNfTypes": "[]",
+            "allowedNssais": "[]",
+            "allowedPlmns": "[]",
+            "apiPrefix": "",
+            "capacity": "0",
+            "defaultNotificationSubscriptions": "[]",
+            "fqdn": "",
+            "interPlmnFqdn": "",
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.14",
+                    "ipv6Address": "",
+                    "port": "8009",
+                    "transport": ""
+                }
+            },
+            "load": "0",
+            "nfServiceStatus": "REGISTERED",
+            "priority": "0",
+            "recoveryTime": "",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+            "serviceName": "",
+            "supportedFeatures": "",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/nrf-settings\/v1",
+                    "expiry": ""
+                }
+            }
+        },
+        "3": {
+            "allowedNfDomains": "[]",
+            "allowedNfTypes": "[]",
+            "allowedNssais": "[]",
+            "allowedPlmns": "[]",
+            "apiPrefix": "",
+            "capacity": "0",
+            "defaultNotificationSubscriptions": "[]",
+            "fqdn": "",
+            "interPlmnFqdn": "",
+            "ipEndPoints": {
+                "0": {
+                    "ipv4Address": "10.20.0.14",
+                    "ipv6Address": "",
+                    "port": "8010",
+                    "transport": ""
+                }
+            },
+            "load": "0",
+            "nfServiceStatus": "REGISTERED",
+            "priority": "0",
+            "recoveryTime": "",
+            "scheme": "http",
+            "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+            "serviceName": "",
+            "supportedFeatures": "",
+            "versions": {
+                "0": {
+                    "apiFullVersion": "v1",
+                    "apiVersionInUri": "\/metrics",
+                    "expiry": ""
+                }
+            }
+        }
+    },
+    "Database": {
+        "ConnectionPoolSize": "4",
+        "ConnectionRetryPeriod": "5000",
+        "ConnectionTimeout": "1000",
+        "DatabaseName": "stonrfcommon",
+        "DatabaseType": "MONGO",
+        "Password": "P5vKG6vE",
+        "Port": 27017,
+        "Server": "10.20.0.3",
+        "ServerSelectionTimeout": "1000",
+        "SocketTimeout": "1000",
+        "Tables": {
+            "0": "cinarnfcollection",
+            "1": "cinarsubscollection",
+            "2": "cinarnfstatecollection"
+        },
+        "UserName": "cnrusr"
+    },
+    "General": {
+        "ClientCount": "4",
+        "ClientTimeout": "3000",
+        "ConfigurationFile": "settings.json",
+        "ConfigurationPath": ".",
+        "HomePlmnId": {
+            "mcc": "001",
+            "mnc": "01"
+        },
+        "NumberofServingServerThreads": "6"
+    },
+    "Logging": {
+        "Directory": "\/var\/log\/cinar\/nrf\/",
+        "DisplayLog": "true",
+        "FileName": "NRF",
+        "LogLevel": "DEBUG"
+    },
+    "NRF": {
+        "0": {
+            "ClientCount": "4",
+            "ClientTimeout": "3000",
+            "DiscServicePort": "8006",
+            "ForwardingStatus": "true",
+            "IPAddress": "10.20.0.14",
+            "NfmServicePort": "8001",
+            "OAuth2ServicePort": "8007",
+            "Schema": "https",
+            "SliceMode": "false",
+            "TAccessTokenPeriod": "10000",
+            "TCheckPeriod": "60000",
+            "TRetryPeriod": "3000"
+        }
+    },
+    "RoamingPlmns": {
+        "0": {
+            "AccessTokenUri": "https:\/\/10.10.10.10:8007",
+            "NFDiscoveryUri": "https:\/\/10.10.10.10:8006",
+            "NFManagementUri": "https:\/\/10.10.10.10:8001",
+            "mcc": "002",
+            "mnc": "002"
+        }
+    },
+    "Security": {
+        "JWTAuthenticate": "false",
+        "MutualAuthenticate": "false",
+        "OAuth2": {
+            "PrivateKey": "certificate\/jwt.key",
+            "PublicKey": "certificate\/jwt.pub"
+        },
+        "TLS": {
+            "Certificate": "certificate\/localhost.crt",
+            "PrivateKey": "certificate\/localhost.key"
+        }
+    },
+    "ServiceSettings": {
+        "AlarmServiceName": "nnrf-nfm",
+        "NFDiscoveryService": {
+            "TDiscoveryValidityPeriod": "3600000"
+        },
+        "NFManagementService": {
+            "Heartbeat": {
+                "HeartbeatFailureCount": "3",
+                "THeartbeatPeriod": "30000"
+            },
+            "TSubscriberValidityPeriod": "3600000",
+            "TSubscribersCleanupPeriod": "1800000"
+        },
+        "NumberofIOServiceThreads": "6"
+    },
+    "NONE": {
+        "allowedNfDomains": "[]",
+        "allowedNfTypes": {
+            "0": "NRF"
+        },
+        "allowedNssais": {
+            "0": {
+                "sd": "",
+                "sst": "1"
+            }
+        },
+        "allowedPlmns": "[]",
+        "amfInfo": {
+            "amfRegionId": "",
+            "amfSetId": "",
+            "backupInfoAmfFailure": "[]",
+            "backupInfoAmfRemoval": "[]",
+            "guamiList": "[]",
+            "n2InterfaceAmfInfo": {
+                "amfName": "",
+                "ipv4EndpointAddress": "[]",
+                "ipv6EndpointAddress": "[]"
+            },
+            "taiList": "[]",
+            "taiRangeList": "[]"
+        },
+        "ausfInfo": {
+            "groupId": "",
+            "routingIndicators": "[]",
+            "supiRanges": "[]"
+        },
+        "bsfInfo": {
+            "dnnList": "[]",
+            "ipDomainList": "[]",
+            "ipv4AddressRanges": "[]",
+            "ipv6PrefixRanges": "[]"
+        },
+        "capacity": "0",
+        "chfInfo": {
+            "gpsiRangeList": "[]",
+            "plmnRangeList": "[]",
+            "supiRangeList": "[]"
+        },
+        "customInfo": "null",
+        "defaultNotificationSubscriptions": "[]",
+        "fqdn": "",
+        "heartBeatTimer": "3",
+        "interPlmnFqdn": "",
+        "ipv4Addresses": {
+            "0": "10.20.0.14"
+        },
+        "ipv6Addresses": "[]",
+        "load": "0",
+        "locality": "",
+        "nfInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+        "nfProfileChangesInd": "false",
+        "nfProfileChangesSupportInd": "false",
+        "nfServicePersistence": "false",
+        "nfServices": {
+            "0": {
+                "allowedNfDomains": "[]",
+                "allowedNfTypes": "[]",
+                "allowedNssais": "[]",
+                "allowedPlmns": "[]",
+                "apiPrefix": "",
+                "capacity": "0",
+                "chfServiceInfo": {
+                    "primaryChfServiceInstance": "",
+                    "secondaryChfServiceInstance": ""
+                },
+                "defaultNotificationSubscriptions": "[]",
+                "fqdn": "",
+                "interPlmnFqdn": "",
+                "ipEndPoints": {
+                    "0": {
+                        "ipv4Address": "10.20.0.14",
+                        "ipv6Address": "fe80::a00:27ff:feae:3fc8%eps0s8",
+                        "port": "8001",
+                        "transport": ""
+                    }
+                },
+                "load": "0",
+                "nfServiceStatus": "REGISTERED",
+                "priority": "0",
+                "recoveryTime": "",
+                "scheme": "http",
+                "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+                "serviceName": "nnrf-nfm",
+                "supportedFeatures": "",
+                "versions": {
+                    "0": {
+                        "apiFullVersion": "v1",
+                        "apiVersionInUri": "\/nnrf-nfm\/v1",
+                        "expiry": ""
+                    }
+                }
+            },
+            "1": {
+                "allowedNfDomains": "[]",
+                "allowedNfTypes": "[]",
+                "allowedNssais": "[]",
+                "allowedPlmns": "[]",
+                "apiPrefix": "",
+                "capacity": "0",
+                "chfServiceInfo": {
+                    "primaryChfServiceInstance": "",
+                    "secondaryChfServiceInstance": ""
+                },
+                "defaultNotificationSubscriptions": "[]",
+                "fqdn": "",
+                "interPlmnFqdn": "",
+                "ipEndPoints": {
+                    "0": {
+                        "ipv4Address": "10.20.0.14",
+                        "ipv6Address": "",
+                        "port": "8006",
+                        "transport": ""
+                    }
+                },
+                "load": "0",
+                "nfServiceStatus": "REGISTERED",
+                "priority": "0",
+                "recoveryTime": "",
+                "scheme": "http",
+                "serviceInstanceId": "d7d2e36b-dbe5-4f79-bbcd-c15ff2176ece",
+                "serviceName": "nnrf-disc",
+                "supportedFeatures": "",
+                "versions": {
+                    "0": {
+                        "apiFullVersion": "v1",
+                        "apiVersionInUri": "\/nnrf-disc\/v1",
+                        "expiry": ""
+                    }
+                }
+            }
+        },
+        "nfStatus": "REGISTERED",
+        "nfType": "NRF",
+        "nrfInfo": {
+            "servedAmfInfo": "{}",
+            "servedAusfInfo": "{}",
+            "servedBsfInfo": "{}",
+            "servedChfInfo": "{}",
+            "servedPcfInfo": "{}",
+            "servedSmfInfo": "{}",
+            "servedUdmInfo": "{}",
+            "servedUdrInfo": "{}",
+            "servedUpfInfo": "{}"
+        },
+        "nsiList": "[]",
+        "pcfInfo": {
+            "dnnList": "[]",
+            "rxDiamHost": "",
+            "rxDiamRealm": "",
+            "supiRanges": "[]"
+        },
+        "perPlmnSnssaiList": "[]",
+        "plmnList": {
+            "0": {
+                "mcc": "001",
+                "mnc": "01"
+            },
+            "1": {
+                "mcc": "002",
+                "mnc": "002"
+            }
+        },
+        "priority": "0",
+        "recoveryTime": "",
+        "sNssais": {
+            "0": {
+                "sd": "",
+                "sst": "1"
+            }
+        },
+        "smfInfo": {
+            "accessType": "[]",
+            "pgwFqdn": "",
+            "sNssaiSmfInfoList": "[]",
+            "taiList": "[]",
+            "taiRangeList": "[]"
+        },
+        "udmInfo": {
+            "externalGroupIdentifiersRanges": "[]",
+            "gpsiRanges": "[]",
+            "groupId": "",
+            "routingIndicators": "[]",
+            "supiRanges": "[]"
+        },
+        "udrInfo": {
+            "externalGroupIdentifiersRanges": "[]",
+            "gpsiRanges": "[]",
+            "groupId": "",
+            "supiRanges": "[]",
+            "supportedDataSets": "[]"
+        },
+        "upfInfo": {
+            "interfaceUpfInfoList": "[]",
+            "iwkEpsInd": "false",
+            "pduSessionTypes": "[]",
+            "sNssaiUpfInfoList": "[]",
+            "smfServingArea": "[]"
+        }
+    }
+}

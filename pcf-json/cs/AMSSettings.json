@@ -1,0 +1,29 @@
+{
+    "amsSettings": {
+        "amsSubscriptionNotifyCallbackServerPort": 7010,
+        "amsTimers": {
+            "amPerfMeasDataProcessTimeInterval": 1,
+            "amPolicyControlDeleteWaitTimeout": 1,
+            "connectionControlTimer": 7,
+            "connectionTimeout": 1500,
+            "subscriptionFailedTimeout": 5
+        },
+        "k8SActive": false,
+        "serviceInstanceId": "",
+        "versions": {
+            "apiVersionInUri": "v1",
+            "expiry": "2022-02-15T10:43:23Z"
+        }
+    },
+    "database": {
+        "ConnectionPoolSize": 10,
+        "DatabaseName": "cinarpcftest",
+        "DatabaseType": "mongodb",
+        "Port": 27017,
+        "Server": "10.20.0.3"
+    },
+    "logging": {
+        "Directory": "/var/log/cinar/pcf/ams/",
+        "LogLevel": "INFO"
+    }
+}

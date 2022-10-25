@@ -1,0 +1,47 @@
+- name: build and run all nfs
+  hosts: test_servers
+  become: true
+  become_user: root
+  gather_facts: true
+  # vars:
+  #   nfs:
+  #     - cnrnrf-vnf
+  #     - cnrudr
+  #     - cnrudm
+  #     - cnramf
+  #     - cnrsmf
+  #     - cnrausf
+  #     - cnrnssf
+  #     - cnrupf
+  #     - cnrnef
+
+  tasks:
+    - name: copy build files
+      copy:
+        src: ~/Cinar-cnfs
+        dest: /home/ubuntu
+
+    # may give error if port connection test fails
+    # - name: build and run docker images
+    #   command: bash /home/ubuntu/Cinar-cnfs/build/build-run.sh KT_CN_001 "{{ item }}"
+    #   loop: "{{ nfs }}"
+    #   ignore_errors: yes
+
+    - name: compose up
+      command: bash /home/ubuntu/Cinar-cnfs/build/pcf-compose-up.sh
+      ignore_errors: yes
+
+    - name: install cnr*
+      command: bash /home/ubuntu/Cinar-cnfs/build/install-cnr.sh
+      ignore_errors: yes
+
+    - name: prepare report
+      command: cat /build/report
+      register: command
+
+    - name: print report
+      debug:
+        var: command.stdout_lines
+
+    #- name: remove build files
+    #  command: rm -rf /build
